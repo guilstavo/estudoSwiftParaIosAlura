@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0E72251BB75F7100E9CB75 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969211BB70F4000676CB1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969201BB70F4000676CB1 /* Item.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969231BB70FA800676CB1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969221BB70FA800676CB1 /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969251BB7107000676CB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969241BB7107000676CB1 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
 		EC4969191BB639F400676CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Base; path = Base.lproj/MyPlayground.playground; sourceTree = "<group>"; };
 		EC4969201BB70F4000676CB1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC4969221BB70FA800676CB1 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		EC49691C1BB70E4900676CB1 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */,
 			);
 			name = viewcontrollers;
 			path = "eggplant-brownie/viewcontrollers";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0E72251BB75F7100E9CB75 /* MealsTableViewController.swift in Sources */,
 				EC4969231BB70FA800676CB1 /* Meal.swift in Sources */,
 				EC4969211BB70F4000676CB1 /* Item.swift in Sources */,
 				EC4969251BB7107000676CB1 /* ViewController.swift in Sources */,
