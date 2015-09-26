@@ -2,21 +2,27 @@
 
 import UIKit
 
-let name = "eggplant"
-let calorias = 50.5
-let eggplantIsVegetable = true
-let happiness = 5
-
-func helloCalories(){
-    print("hello calories!")
+class Meal{
+    var name:String?
+    var happiness:Int?
+    
 }
 
-helloCalories()
-print("oi tudo bem")
-helloCalories()
+let brownie = Meal()
+brownie.name = "eggplant"
+brownie.happiness = 5
+print(brownie.name)
+print(brownie.happiness)
 
-func add(name:String, calories:Double){
-    print("adding \(name) \(calories)")
+var name:String!
+
+name = "brownie"
+if let n = name{
+    print(n.characters.count)
+}else{
+    print("empty")
 }
 
-add("eggplant", 50.5)
+
+var name2 = "abobrinha"
+print(name2.characters.count)
