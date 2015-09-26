@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC4969191BB639F400676CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Base; path = Base.lproj/MyPlayground.playground; sourceTree = "<group>"; };
 		EC9818A41BB62EFB00F67247 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9818A71BB62EFB00F67247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC9818A91BB62EFB00F67247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 				EC9818A71BB62EFB00F67247 /* AppDelegate.swift */,
 				EC9818A91BB62EFB00F67247 /* ViewController.swift */,
 				EC9818AB1BB62EFB00F67247 /* Main.storyboard */,
+				EC4969181BB639F400676CB1 /* MyPlayground.playground */,
 				EC9818AE1BB62EFB00F67247 /* Assets.xcassets */,
 				EC9818B01BB62EFB00F67247 /* LaunchScreen.storyboard */,
 				EC9818B31BB62EFB00F67247 /* Info.plist */,
@@ -143,6 +145,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EC4969181BB639F400676CB1 /* MyPlayground.playground */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC4969191BB639F400676CB1 /* Base */,
+			);
+			name = MyPlayground.playground;
+			sourceTree = "<group>";
+		};
 		EC9818AB1BB62EFB00F67247 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +294,7 @@
 				EC9818B81BB62EFB00F67247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
