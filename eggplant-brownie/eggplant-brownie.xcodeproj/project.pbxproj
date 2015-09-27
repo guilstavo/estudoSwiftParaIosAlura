@@ -11,6 +11,8 @@
 		EC4969211BB70F4000676CB1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969201BB70F4000676CB1 /* Item.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969231BB70FA800676CB1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969221BB70FA800676CB1 /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969251BB7107000676CB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969241BB7107000676CB1 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC5CB3821BB7B50000879EF4 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5CB3801BB7B50000879EF4 /* NewItemViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		EC5CB3841BB7B55800879EF4 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CB3831BB7B55800879EF4 /* NewItemViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC9818A81BB62EFB00F67247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9818A71BB62EFB00F67247 /* AppDelegate.swift */; };
 		EC9818AD1BB62EFB00F67247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9818AB1BB62EFB00F67247 /* Main.storyboard */; };
 		EC9818AF1BB62EFB00F67247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9818AE1BB62EFB00F67247 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		EC4969201BB70F4000676CB1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC4969221BB70FA800676CB1 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		EC4969241BB7107000676CB1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../views/ViewController.swift; sourceTree = "<group>"; };
+		EC5CB3801BB7B50000879EF4 /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
+		EC5CB3831BB7B55800879EF4 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		EC9818A41BB62EFB00F67247 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9818A71BB62EFB00F67247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC9818AC1BB62EFB00F67247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		EC49691C1BB70E4900676CB1 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				EC5CB3831BB7B55800879EF4 /* NewItemViewController.swift */,
 				EC4969241BB7107000676CB1 /* ViewController.swift */,
 				EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */,
 			);
@@ -66,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				EC9818AB1BB62EFB00F67247 /* Main.storyboard */,
+				EC5CB3801BB7B50000879EF4 /* NewItemViewController.xib */,
 			);
 			name = views;
 			path = "eggplant-brownie/views";
@@ -162,6 +168,7 @@
 			files = (
 				EC9818B21BB62EFB00F67247 /* LaunchScreen.storyboard in Resources */,
 				EC9818AF1BB62EFB00F67247 /* Assets.xcassets in Resources */,
+				EC5CB3821BB7B50000879EF4 /* NewItemViewController.xib in Resources */,
 				EC9818AD1BB62EFB00F67247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +182,7 @@
 			files = (
 				EC0E72251BB75F7100E9CB75 /* MealsTableViewController.swift in Sources */,
 				EC4969231BB70FA800676CB1 /* Meal.swift in Sources */,
+				EC5CB3841BB7B55800879EF4 /* NewItemViewController.swift in Sources */,
 				EC4969211BB70F4000676CB1 /* Item.swift in Sources */,
 				EC4969251BB7107000676CB1 /* ViewController.swift in Sources */,
 				EC9818A81BB62EFB00F67247 /* AppDelegate.swift in Sources */,

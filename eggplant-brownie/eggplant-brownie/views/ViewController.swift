@@ -27,6 +27,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Item(name:"Chocolate chip", calories: 1000)
     ]
     
+    override func viewDidLoad() {
+        let newItemButton = UIBarButtonItem(
+            title: "New Item",
+            style: UIBarButtonItemStyle.Plain,
+            target: self,
+            action: Selector("showNewItem")
+        )
+        navigationItem.rightBarButtonItem = newItemButton
+    }
+    
+    func showNewItem(){
+        let newItem = NewItemViewController(nibName: "NewItemViewController", bundle: nil)
+        if let navigation = navigationController{
+            navigation.pushViewController(newItem, animated: true)
+        }
+    }
+    
     var selected = Array<Item>()
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
