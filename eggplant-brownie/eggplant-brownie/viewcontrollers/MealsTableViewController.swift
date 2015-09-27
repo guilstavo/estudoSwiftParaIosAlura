@@ -14,9 +14,7 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
     
     func add(meal: Meal) {
         meals.append(meal)
-        let dir = getUserDir()
-        let archive =  "\(dir)/eggplant-brownie-meals"
-        NSKeyedArchiver.archiveRootObject(meals, toFile: archive)
+        Dao().saveMeals(meals)
         tableView.reloadData()
     }
     
@@ -29,11 +27,7 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
     }
     
     override func viewDidLoad() {
-        let dir = getUserDir()
-        let archive =  "\(dir)/eggplant-brownie-meals"
-        if let loaded = NSKeyedUnarchiver.unarchiveObjectWithFile(archive) {
-            self.meals = loaded as! Array
-        }
+        meals = Dao().loadMeals()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

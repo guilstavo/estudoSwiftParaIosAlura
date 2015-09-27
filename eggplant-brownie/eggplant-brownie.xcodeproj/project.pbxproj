@@ -19,6 +19,7 @@
 		EC9818AD1BB62EFB00F67247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9818AB1BB62EFB00F67247 /* Main.storyboard */; };
 		EC9818AF1BB62EFB00F67247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9818AE1BB62EFB00F67247 /* Assets.xcassets */; };
 		EC9818B21BB62EFB00F67247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9818B01BB62EFB00F67247 /* LaunchScreen.storyboard */; };
+		ECA5FB6E1BB8A55C0094DC79 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5FB6D1BB8A55C0094DC79 /* Dao.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		EC9818AE1BB62EFB00F67247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC9818B11BB62EFB00F67247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC9818B31BB62EFB00F67247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA5FB6D1BB8A55C0094DC79 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				EC4969201BB70F4000676CB1 /* Item.swift */,
 				EC4969221BB70FA800676CB1 /* Meal.swift */,
+				ECA5FB6D1BB8A55C0094DC79 /* Dao.swift */,
 			);
 			name = models;
 			path = "eggplant-brownie/models";
@@ -191,6 +194,7 @@
 				EC5CB3841BB7B55800879EF4 /* NewItemViewController.swift in Sources */,
 				EC4969211BB70F4000676CB1 /* Item.swift in Sources */,
 				EC4969251BB7107000676CB1 /* ViewController.swift in Sources */,
+				ECA5FB6E1BB8A55C0094DC79 /* Dao.swift in Sources */,
 				EC9818A81BB62EFB00F67247 /* AppDelegate.swift in Sources */,
 				EC2B42F81BB87BFA00DF3FAE /* RemoveMealController.swift in Sources */,
 				EC2B42F61BB8654700DF3FAE /* Alert.swift in Sources */,

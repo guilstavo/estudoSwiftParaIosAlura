@@ -29,26 +29,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             action: Selector("showNewItem")
         )
         navigationItem.rightBarButtonItem = newItemButton
-        let dir = getUserDir()
-        let archive = "\(dir)/eggplant-brownie-items"
-        if let loaded = NSKeyedUnarchiver.unarchiveObjectWithFile(archive){
-            items = loaded as! Array
-        }
-    }
-    
-    func getUserDir() -> String {
-        let userDirs = NSSearchPathForDirectoriesInDomains(
-            NSSearchPathDirectory.DocumentDirectory,
-            NSSearchPathDomainMask.UserDomainMask,
-            true)
-        return userDirs[ 0 ] as String
+        items = Dao().loadItems()
     }
     
     func add(item: Item) {
         items.append(item)
-        let dir = getUserDir()
-        let archive = "\(dir)/eggplant-brownie-items"
-        NSKeyedArchiver.archiveRootObject(items, toFile: archive)
+        Dao().saveItems(items)
         if let table = tableView{
             table.reloadData()
         }else{
