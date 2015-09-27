@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC0E72251BB75F7100E9CB75 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC2B42F61BB8654700DF3FAE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B42F51BB8654700DF3FAE /* Alert.swift */; settings = {ASSET_TAGS = (); }; };
+		EC2B42F81BB87BFA00DF3FAE /* RemoveMealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B42F71BB87BFA00DF3FAE /* RemoveMealController.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969211BB70F4000676CB1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969201BB70F4000676CB1 /* Item.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969231BB70FA800676CB1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969221BB70FA800676CB1 /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
 		EC4969251BB7107000676CB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4969241BB7107000676CB1 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
 		EC2B42F51BB8654700DF3FAE /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		EC2B42F71BB87BFA00DF3FAE /* RemoveMealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveMealController.swift; sourceTree = "<group>"; };
 		EC4969191BB639F400676CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Base; path = Base.lproj/MyPlayground.playground; sourceTree = "<group>"; };
 		EC4969201BB70F4000676CB1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC4969221BB70FA800676CB1 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				EC9818AB1BB62EFB00F67247 /* Main.storyboard */,
 				EC5CB3801BB7B50000879EF4 /* NewItemViewController.xib */,
 				EC2B42F51BB8654700DF3FAE /* Alert.swift */,
+				EC2B42F71BB87BFA00DF3FAE /* RemoveMealController.swift */,
 			);
 			name = views;
 			path = "eggplant-brownie/views";
@@ -189,6 +192,7 @@
 				EC4969211BB70F4000676CB1 /* Item.swift in Sources */,
 				EC4969251BB7107000676CB1 /* ViewController.swift in Sources */,
 				EC9818A81BB62EFB00F67247 /* AppDelegate.swift in Sources */,
+				EC2B42F81BB87BFA00DF3FAE /* RemoveMealController.swift in Sources */,
 				EC2B42F61BB8654700DF3FAE /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
