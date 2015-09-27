@@ -8,9 +8,21 @@
 
 import UIKit
 
-class MealsTableViewController: UITableViewController {
+class MealsTableViewController: UITableViewController, AddAMealDelegate {
 
     var meals = [Meal(name: "eggplant brownie", happiness: 5), Meal(name: "zucchini muffin", happiness: 3)]
+    
+    func add(meal:Meal){
+        meals.append(meal)
+        tableView.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addMeal"{
+            let view = segue.destinationViewController as! ViewController
+            view.delegate = self
+        }
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count

@@ -22,7 +22,7 @@
 		EC4969191BB639F400676CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Base; path = Base.lproj/MyPlayground.playground; sourceTree = "<group>"; };
 		EC4969201BB70F4000676CB1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC4969221BB70FA800676CB1 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		EC4969241BB7107000676CB1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC4969241BB7107000676CB1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../views/ViewController.swift; sourceTree = "<group>"; };
 		EC9818A41BB62EFB00F67247 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9818A71BB62EFB00F67247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC9818AC1BB62EFB00F67247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 		EC49691C1BB70E4900676CB1 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				EC4969241BB7107000676CB1 /* ViewController.swift */,
 				EC0E72241BB75F7100E9CB75 /* MealsTableViewController.swift */,
 			);
 			name = viewcontrollers;
@@ -64,7 +65,6 @@
 		EC49691D1BB70E4900676CB1 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				EC4969241BB7107000676CB1 /* ViewController.swift */,
 				EC9818AB1BB62EFB00F67247 /* Main.storyboard */,
 			);
 			name = views;
