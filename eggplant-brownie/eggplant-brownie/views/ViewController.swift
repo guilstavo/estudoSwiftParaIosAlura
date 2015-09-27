@@ -43,10 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let table = tableView{
             table.reloadData()
         }else{
-            let alert = UIAlertController(title: "Sorry", message: "Unexpectef error, but the item was added.", preferredStyle: UIAlertControllerStyle.Alert)
-            let ok = UIAlertAction(title: "Understood", style: UIAlertActionStyle.Cancel, handler: nil)
-            alert.addAction(ok)
-            presentViewController(alert, animated: true, completion: nil)
+            Alert(controller: self).show("Unexpectef error, but the item was added.")
         }
     }
     
@@ -54,6 +51,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let newItem = NewItemViewController(delegate: self)
         if let navigation = navigationController{
             navigation.pushViewController(newItem, animated: true)
+        }else{
+            Alert(controller: self).show()
         }
     }
     
@@ -72,48 +71,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        if cell == nil{
-            return
-        }
-        let item = items[indexPath.row]
-        if (cell!.accessoryType == UITableViewCellAccessoryType.None) {
-            cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
-            selected.append(item)
-        } else {
-            cell!.accessoryType = UITableViewCellAccessoryType.None
-            if let position = selected.indexOf(item){
-                selected.removeAtIndex(position)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath){
+            let item = items[indexPath.row]
+            if (cell.accessoryType == UITableViewCellAccessoryType.None) {
+                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                selected.append(item)
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryType.None
+                if let position = selected.indexOf(item){
+                    selected.removeAtIndex(position)
+                }else{
+                    Alert(controller: self).show()
+                }
             }
-
+        }else{
+            Alert(controller: self).show()
         }
+
+        
+        
     }
     
-    @IBAction func add(){
+    func getMealFromForm() -> Meal?{
         if nameField == nil || happinessField == nil{
-            return
+            return nil
         }
         
         let name = nameField!.text
         let happiness = Int(happinessField!.text!)
         
         if happiness == nil{
-            return
+            return nil
         }
         
         let meal = Meal(name: name!, happiness: happiness!)
         meal.items = selected
         print("eaten: \(meal.name), \(meal.happiness) \(meal.items)")
-        
-        if delegate == nil{
-            return
+        return meal
+    }
+    
+    @IBAction func add(){
+        if let meal = getMealFromForm(){
+            if let meals = delegate{
+                meals.add(meal)
+                if let navigation = self.navigationController{
+                    navigation.popViewControllerAnimated(true)
+                }else{
+                    Alert(controller: self).show("Unexpected error. But the meal was added.")
+                }
+                return
+            }
         }
-        delegate!.add(meal)
-        
-        if let navigation = self.navigationController{
-            navigation.popViewControllerAnimated(true)
-        }
-
+        Alert(controller: self).show()
     }
 
 
