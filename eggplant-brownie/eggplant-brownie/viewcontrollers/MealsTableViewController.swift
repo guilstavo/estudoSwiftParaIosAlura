@@ -33,7 +33,22 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
         let meal = meals[row]
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
         cell.textLabel!.text = meal.name
+        let longPress = UILongPressGestureRecognizer(target: self, action: Selector("showDetails:"))
+        cell.addGestureRecognizer(longPress)
         return cell
+    }
+    
+    func showDetails(recognizer: UILongPressGestureRecognizer){
+        if recognizer.state == UIGestureRecognizerState.Began{
+            let cell = recognizer.view as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            if indexPath == nil{
+                return
+            }
+            let row = indexPath!.row
+            let meal = meals[row]
+            print("Meal: \(meal.name) \(meal.happiness)")
+        }
     }
     
 }
