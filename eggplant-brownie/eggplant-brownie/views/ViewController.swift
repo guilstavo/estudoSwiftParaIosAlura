@@ -40,10 +40,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(item: Item) {
         items.append(item)
-        if(tableView == nil){
-            return
+        if let table = tableView{
+            table.reloadData()
+        }else{
+            let alert = UIAlertController(title: "Sorry", message: "Unexpectef error, but the item was added.", preferredStyle: UIAlertControllerStyle.Alert)
+            let ok = UIAlertAction(title: "Understood", style: UIAlertActionStyle.Cancel, handler: nil)
+            alert.addAction(ok)
+            presentViewController(alert, animated: true, completion: nil)
         }
-        tableView!.reloadData()
     }
     
     func showNewItem(){
