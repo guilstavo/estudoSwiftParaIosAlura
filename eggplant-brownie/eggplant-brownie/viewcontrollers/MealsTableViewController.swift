@@ -10,11 +10,30 @@ import UIKit
 
 class MealsTableViewController: UITableViewController, AddAMealDelegate {
 
-    var meals = [Meal(name: "eggplant brownie", happiness: 5), Meal(name: "zucchini muffin", happiness: 3)]
+    var meals = Array<Meal>()
     
-    func add(meal:Meal){
+    func add(meal: Meal) {
         meals.append(meal)
+        let dir = getUserDir()
+        let archive =  "\(dir)/eggplant-brownie-meals"
+        NSKeyedArchiver.archiveRootObject(meals, toFile: archive)
         tableView.reloadData()
+    }
+    
+    func getUserDir() -> String {
+        let userDirs = NSSearchPathForDirectoriesInDomains(
+            NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask,
+            true)
+        return userDirs[ 0 ] as String
+    }
+    
+    override func viewDidLoad() {
+        let dir = getUserDir()
+        let archive =  "\(dir)/eggplant-brownie-meals"
+        if let loaded = NSKeyedUnarchiver.unarchiveObjectWithFile(archive) {
+            self.meals = loaded as! Array
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -19,14 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var tableView:UITableView?
     var delegate:AddAMealDelegate?
     
-    var items = [
-        Item(name:"eggplant brownie", calories: 10),
-        Item(name:"Zucchini Muffin", calories: 10),
-        Item(name:"Cookie", calories: 10),
-        Item(name:"Coconut oil", calories: 500),
-        Item(name:"Chocolate frosting", calories: 1000),
-        Item(name:"Chocolate chip", calories: 1000)
-    ]
+    var items = Array<Item>()
     
     override func viewDidLoad() {
         let newItemButton = UIBarButtonItem(
@@ -36,10 +29,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             action: Selector("showNewItem")
         )
         navigationItem.rightBarButtonItem = newItemButton
+        let dir = getUserDir()
+        let archive = "\(dir)/eggplant-brownie-items"
+        if let loaded = NSKeyedUnarchiver.unarchiveObjectWithFile(archive){
+            items = loaded as! Array
+        }
+    }
+    
+    func getUserDir() -> String {
+        let userDirs = NSSearchPathForDirectoriesInDomains(
+            NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask,
+            true)
+        return userDirs[ 0 ] as String
     }
     
     func add(item: Item) {
         items.append(item)
+        let dir = getUserDir()
+        let archive = "\(dir)/eggplant-brownie-items"
+        NSKeyedArchiver.archiveRootObject(items, toFile: archive)
         if let table = tableView{
             table.reloadData()
         }else{
